@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../icons/MaterialIcons-Regular.woff); /* For IE6-8 */
+   /*  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype') */
+  }
+/*  Material Icons CSS*/
+
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://storage.googleapis.com/non-spec-apps/mio-icons/latest/baseline.css');
+@import url('https://storage.googleapis.com/non-spec-apps/mio-icons/latest/sharp.css');
+@import url('https://storage.googleapis.com/non-spec-apps/mio-icons/latest/outline.css');
+@import url('https://storage.googleapis.com/non-spec-apps/mio-icons/latest/round.css');
+@import url('https://storage.googleapis.com/non-spec-apps/mio-icons/latest/twotone.css'); */
+
+/* ---------------------------------------------------
+  Material Icons
+----------------------------------------------------- */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.icon-image-preview {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.material-icons.md-14 {
+    font-size: 14px;
+}
+
+.material-icons.md-16 {
+    font-size: 16px;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-20 {
+    font-size: 20px;
+}
+
+.material-icons.md-22 {
+    font-size: 22px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-26 {
+    font-size: 26px;
+}
+
+.material-icons.md-28 {
+    font-size: 28px;
+}
+
+.material-icons.md-30 {
+    font-size: 30px;
+}
+
+.material-icons.md-32 {
+    font-size: 32px;
+}
+
+.material-icons.md-34 {
+    font-size: 34px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-38 {
+    font-size: 38px;
+}
+
+.material-icons.md-40 {
+    font-size: 40px;
+}
+
+.material-icons.md-42 {
+    font-size: 42px;
+}
+
+.material-icons.md-46 {
+    font-size: 46px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.md-54 {
+    font-size: 54px;
+}
+
+.material-icons.md-56 {
+    font-size: 56px;
+}
+
+.material-icons.md-64 {
+    font-size: 64px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Rules for sizing the icon. */
+
+.icon-14 {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-18 {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-22 {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-26 {
+    width: 26px;
+    height: 26px;
+}
+
+.icon-28 {
+    width: 28px;
+    height: 28px;
+}
+
+.icon-30 {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-34 {
+    width: 34px;
+    height: 34px;
+}
+
+.icon-36 {
+    width: 36px;
+    height: 36px;
+}
+
+.icon-38 {
+    width: 38px;
+    height: 38px;
+}
+
+.icon-44 {
+    width: 44px;
+    height: 44px;
+}
+
+.icon-48 {
+    width: 48px;
+    height: 48px;
+}
+
+.icon-54 {
+    width: 54px;
+    height: 54px;
+}
+
+.icon-58 {
+    width: 58px;
+    height: 58px;
+}
+
+.icon-64 {
+    width: 64px;
+    height: 64px;
+}
+
+.icon-image-preview {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: -6px 0;
+}
+
+.icon-white {
+    -webkit-filter: contrast(4) invert(1);
+    -moz-filter: contrast(4) invert(1);
+    -o-filter: contrast(4) invert(1);
+    -ms-filter: contrast(4) invert(1);
+    filter: contrast(4) invert(1);
+}

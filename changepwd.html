@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="">
+  <title>Gridlex</title>
+
+  <link href="vendor/images/fevicon.png" sizes="16X16" rel="shortcut icon" type="image/png">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="vendor/app/css/forgotpwd.css" rel="stylesheet">
+
+  <style>
+
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+    <header class="masthead mb-auto">
+
+      <nav id="header" class="navbar navbar-expand-lg navbar-light fixed-tops">
+        <div class="container">
+          <a class="navbar-brand h4 font-weight-bold mb-0" href="dashboard.html"><img
+              src="vendor/images/logo-light-text.png" class="logo"></a>
+
+
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" class="inner cover">
+      <div class="content login-section-pwd">
+       
+        <section class="login-page">
+          <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-sm-9 col-md-7 col-lg-5 ml-auto">
+                <div class="card-block border-0  py-3">
+                  <form class="" method="POST">
+
+                    <div class="card">
+                      <div class="card-header text-center" style="padding:10px;">
+                        <h3 class="m-0">Sign Up</h3>
+
+                      </div>
+                      <div class="card-body password_setup">
+                        <form role="form" action="" method="post">
+
+
+
+                          <div class="login-page mb-2">
+                            <!-- <label>First Name</label> -->
+
+                            <input type="text" class="form-control" name="first_name" placeholder="First Name"
+                              required="">
+                          </div>
+                          <div class="login-page mb-2">
+                            <!-- <label>Last Name</label> -->
+                            <input type="text" class="form-control" name="last_name" placeholder="Last Name"
+                              required="">
+
+
+
+                          </div>
+                          <div class="login-page mb-2">
+                            <!-- <label>Email</label> -->
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                              required="" onmouseleave="check_user(this)">
+
+                            <div id="hidden-info" style="display:none; text-align: end;">
+                              <span style="color:#a6db93; font-size:12px;">Account already exists.<a
+                                  href="/https://go.gridlex.com/">Please login</a></span>
+                            </div>
+
+                          </div>
+                          <div class="login-page my-2">
+                            <!-- <label>Password</label> -->
+                            <div class="row p-0">
+                              <div class="col-md-10 col-10">
+                                <input type="password" class="form-control" id="password" name="password"
+                                  placeholder="Choose Password" required="">
+                              </div>
+                              <div class="col-md-2 my-1 p-0 col-2">
+                                <button type="button" id="showpwd" class="btn btn-secondary p-0"
+                                  onclick="show_password();" style="font-size : 10px">Show</button>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+
+                          <div class="login-page mb-2">
+                            <!-- <label> Confirm Password</label> -->
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+                              onmouseleave="check_password()" placeholder="Confirm Password" required="">
+                            <div id="pwd_check" style="display:none;">
+                              <span style="color:#de647e;">Passwords Doesn't match</span>
+                            </div>
+                            <input type="hidden" name="token" value="{{token}}">
+                          </div>
+                          <div class="login-page mb-2">
+                            <!-- <label>Phone</label> -->
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone"
+                              required="">
+
+                          </div>
+                          <div class="login-page mb-2">
+                            <!-- <label>Organization Name</label> -->
+                            <input type="text" class="form-control" id="organization_name" name="organization_name"
+                              placeholder="Organization Name" required="" onmouseleave="domain_name_change()">
+
+                          </div>
+                          <div class="login-page mb-2" id="domain" style="display: none;">
+                            <!-- <label>Organization Name</label> -->
+                            <input type="text" class="form-control" id="domain_name" name="domain_name" placeholder=""
+                              value="">
+
+                            <p class="my-1 p-0" style="font-size:10px; color: #32a0a8; text-align: end;">We've created
+                              gridlex address for you, You can change it.</p>
+
+                          </div>
+                          <div class="login-page mb-2">
+                            <!-- <label>Sector</label> -->
+                            <select name="sector" class="form-control" required="">
+                              <option value=""> Choose Sector</option>
+                              {% for sector in sector_options %}
+                              <option value="{{sector.option}}">{{sector.option_name}}</option>
+                              {% endfor %}
+                            </select>
+                            <!-- <input type="text" class="form-control" id = "sector"name = "sector"placeholder="Choose Sector" required > -->
+
+                          </div>
+
+                          <!-- <span class="city" style="font-size:10px"></span><br> -->
+                          <p  class="mt-4 country">Your country based
+                            on your Ip address is
+                            <span class="country" style="font-size:10px">
+                              <select name="country" class="selects">
+                                <option value="">IND</option>
+                                {%for country in countries %}
+                                <option value="{{country.country_code}}">IND</option>
+                                {%endfor %}
+                              </select>
+                            </span>
+                            <!-- <span  style="font-size:10px;" onclick="show_countries()">Change country</span> -->
+                          </p>
+
+
+                          <span class="ip" value=""></span>
+
+
+                          <div class="text-center">
+                            <input type="submit" id="submit-button" value="SIGN UP"
+                              class="btn btn-primary w-50  login_btn my-2 form-control" style="font-size: 12px;">
+
+                          </div>
+
+                      </div>
+
+
+                  </form>
+                </div>
+
+
+
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-5 col-lg-4 m-0">
+              <ul class="m-0 p-0 pwd_c">
+                <li class="mb-2"> <span class="margin-right">&#10003;</span>Password must be of minimun 8 characters</li>
+                <li class="mb-2"><span class="margin-right">&#10003;</span>Contain atleast one Lower case letter</li>
+                <li class="mb-2"><span class="margin-right">&#10003;</span>Contain atleast one Upper case letter</li>
+                <li class="mb-2"><span class="margin-right">&#10003;</span>Contain atleast one special case</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      </section>
+  </div>
+  </main>
+
+  <footer id="footer" class="mastfoot mt-auto footer border-top py-3">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          Copyright ©
+          <script>document.write(new Date().getFullYear())</script> <span class="text-g">Gridlex</span>
+        </div>
+        <div class="col-md-6 col-12">
+          <a class="text-dark" href=" https://gridlex.com/about/">About Us</a> |
+          <a class="text-dark" href=" https://gridlex.com/contact/">Contact Us</a> |
+          <a class="text-dark" href="https://go.gridlex.com/logout/">Logout</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <script src="vendor/app/js/custom-js/slim-min.js"></script>
+  <script src="vendor/app/js/custom-js/bootsrap-min.js"></script>
+</body>
+
+</html>
